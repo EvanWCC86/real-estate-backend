@@ -1,0 +1,70 @@
+const mongoose = require('mongoose');
+
+const PostSchema = new mongoose.Schema({
+    userId:{
+        type:String,
+        require:true,
+    },
+    desc:{
+        type:String,
+        default:"",
+    },
+    buildingType:{
+        type:String,
+        default:""
+    },
+    feature:{
+        type:Boolean,
+        default:false
+    },
+    images:{
+        type:Array,
+        default:[]
+    },
+    city:{
+        type:String,
+        default:"",
+    },
+    address:{
+        type:String,
+        default:"",
+    },
+    salesType:{
+        type:String,
+        default:""
+    },
+    price:{
+        type:Number,
+        default:null
+    },
+    year:{
+        type:Number,
+        default:null
+    },
+    bedrooms:{
+        type:Number,
+        default:null
+    },
+    bathrooms:{
+        type:Number,
+        default:null
+    },
+    driveway:{
+        type:Number,
+        default:null
+    },
+    garage:{
+        type:Number,
+        default:null
+    },
+    lot_area:{
+        type:Number,
+        default:null
+    },
+    building_area:{
+        type:Number,
+        default:null
+    }
+},{timestamp:true})
+
+module.exports = mongoose.model("Post",PostSchema )
