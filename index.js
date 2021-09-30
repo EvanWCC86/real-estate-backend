@@ -1,8 +1,8 @@
 const express = require('express');
 require("dotenv").config();
 const cors = require('cors')
-const multer = require("multer");
-const path = require('path');
+// const multer = require("multer");
+// const path = require('path');
 
 // import files
 const connectDB = require("./config/db");
