@@ -1,6 +1,6 @@
 const express = require('express');
 require("dotenv").config();
-
+const cors = require("cors")
 // const multer = require("multer");
 // const path = require('path');
 
@@ -17,7 +17,7 @@ const app = express();
 // middleware
 // app.use("/images", express.static(path.join(__dirname, "/images")));
 app.use(express.json());
-
+app.use(cors());
 app.use("/api/auth", authRoute)
 app.use("/api/posts", postRoute)
 
